@@ -6,6 +6,7 @@ import 'sac/c_sac.dart';
 import 'sac/d_sac.dart';
 import 'sac/e_sac.dart';
 import 'sac/f_sac.dart';
+import 'sac/g_sac.dart';
 
 class SacPage extends StatelessWidget {
   const SacPage({Key? key}) : super(key: key);
@@ -75,7 +76,8 @@ class SacPage extends StatelessWidget {
           const Divider(),
           ListTile(
             leading: const Text('6', style: TextStyle(fontSize: 20)),
-            title: const Text('Soma das amortizações em um intervalo de tempo'),
+            title: const Text(
+                'Descubra a soma das amortizações em um intervalo de tempo'),
             trailing: const Icon(Icons.arrow_forward),
             onTap: () {
               Navigator.push(
@@ -85,10 +87,14 @@ class SacPage extends StatelessWidget {
           const Divider(),
           ListTile(
             leading: const Text('7', style: TextStyle(fontSize: 20)),
-            title: const Text('Título'),
-            subtitle: const Text('Subtítulo'),
+            title: const Text(
+              'Descubra a soma dos juros acumulados até um determinado mês',
+            ),
             trailing: const Icon(Icons.arrow_forward),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => const GSac()));
+            },
           ),
           const Divider(),
           ListTile(
