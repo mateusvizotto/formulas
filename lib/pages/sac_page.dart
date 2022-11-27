@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'sac/a_sac.dart';
 import 'sac/b_sac.dart';
 import 'sac/c_sac.dart';
+import 'sac/d_sac.dart';
 
 class SacPage extends StatelessWidget {
   const SacPage({Key? key}) : super(key: key);
@@ -43,16 +44,20 @@ class SacPage extends StatelessWidget {
             trailing: const Icon(Icons.arrow_forward),
             onTap: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (_) => CSac()));
+                  context, MaterialPageRoute(builder: (_) => const CSac()));
             },
           ),
           const Divider(),
           ListTile(
             leading: const Text('4', style: TextStyle(fontSize: 20)),
-            title: const Text('Título'),
-            subtitle: const Text('Subtítulo'),
+            title: const Text(
+              'Descubra os juros que ainda restam ser pagos menos um real',
+            ),
             trailing: const Icon(Icons.arrow_forward),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => const DSac()));
+            },
           ),
           const Divider(),
           ListTile(

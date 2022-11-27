@@ -89,7 +89,7 @@ class _BSacState extends State<BSac> {
               height: 10,
             ),
             Text(
-              'R\$ ' + result.toString(),
+              'R\$ ' + result!.toStringAsFixed(2),
               style: const TextStyle(fontSize: 25),
             ),
           ],
