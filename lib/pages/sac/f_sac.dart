@@ -87,7 +87,7 @@ class _FSacState extends State<FSac> {
               height: 20,
             ),
             const Text(
-              'O valor da prestação é de:',
+              'O valor da soma das amortizaçãos em um intervalo é de:',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 20),
             ),

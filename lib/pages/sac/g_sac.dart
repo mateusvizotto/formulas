@@ -104,7 +104,7 @@ class _GSacState extends State<GSac> {
               height: 20,
             ),
             const Text(
-              'O valor da prestação é de:',
+              'O valor dos juros acumulados é de:',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 20),
             ),
