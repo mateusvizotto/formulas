@@ -4,6 +4,7 @@ import 'sac/a_sac.dart';
 import 'sac/b_sac.dart';
 import 'sac/c_sac.dart';
 import 'sac/d_sac.dart';
+import 'sac/e_sac.dart';
 
 class SacPage extends StatelessWidget {
   const SacPage({Key? key}) : super(key: key);
@@ -15,7 +16,6 @@ class SacPage extends StatelessWidget {
         children: [
           ListTile(
             leading: const Text('1', style: TextStyle(fontSize: 20)),
-            //!-----------------------------------------------------------------
             title: const Text('Descubra o valor da amortização'),
             trailing: const Icon(Icons.arrow_forward),
             onTap: () {
@@ -51,7 +51,7 @@ class SacPage extends StatelessWidget {
           ListTile(
             leading: const Text('4', style: TextStyle(fontSize: 20)),
             title: const Text(
-              'Descubra os juros que ainda restam ser pagos menos um real',
+              'Descubra os juros que ainda restam ser pagos',
             ),
             trailing: const Icon(Icons.arrow_forward),
             onTap: () {
@@ -62,10 +62,14 @@ class SacPage extends StatelessWidget {
           const Divider(),
           ListTile(
             leading: const Text('5', style: TextStyle(fontSize: 20)),
-            title: const Text('Título'),
-            subtitle: const Text('Subtítulo'),
+            title: const Text(
+              'Descubra o valor das prestações que ainda precisam ser pagas',
+            ),
             trailing: const Icon(Icons.arrow_forward),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => const ESac()));
+            },
           ),
           const Divider(),
           ListTile(

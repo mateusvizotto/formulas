@@ -23,7 +23,7 @@ class _DSacState extends State<DSac> {
     segundaFormula = (totalEmprestado / qtdMeses) * (qtdMeses - qtdMesesPagos);
 
     double taxa = double.parse(stringTaxa!.text);
-    result = (taxa / 100) * segundaFormula! - 1;
+    result = (taxa / 100) * segundaFormula!;
   }
 
   @override
@@ -32,7 +32,7 @@ class _DSacState extends State<DSac> {
       appBar: AppBar(),
       body: Padding(
         padding: const EdgeInsets.all(20),
-        child: Column(
+        child: ListView(
           children: [
             const Text(
               'Insira os valores nos campos abaixo',
@@ -75,8 +75,7 @@ class _DSacState extends State<DSac> {
               height: 20,
             ),
             TextField(
-              controller:
-                  stringTaxa, //!---------------------------------------------
+              controller: stringTaxa,
               keyboardType: TextInputType.number,
               decoration: const InputDecoration(
                 labelText: 'Digite a taxa de juros em porcentagem %',
@@ -100,7 +99,7 @@ class _DSacState extends State<DSac> {
               height: 20,
             ),
             const Text(
-              'O valor total da dívida restante menos uma parcela paga é de :',
+              'O valor dos juros restantes na parcela é de:',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 20),
             ),
@@ -109,6 +108,7 @@ class _DSacState extends State<DSac> {
             ),
             Text(
               'R\$ ' + result!.toStringAsFixed(2),
+              textAlign: TextAlign.center,
               style: const TextStyle(fontSize: 25),
             ),
           ],
