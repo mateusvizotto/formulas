@@ -10,11 +10,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Trabalho de matemática financeira - Formulas SAC e PRICE',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       home: const InitialPage(),
+      darkTheme: ThemeData.dark(),
     );
   }
 }

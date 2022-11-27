@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:formulas/pages/price_page.dart';
+import 'package:formulas/pages/sac_page.dart';
 
 class InitialPage extends StatelessWidget {
   const InitialPage({Key? key}) : super(key: key);
@@ -9,7 +11,7 @@ class InitialPage extends StatelessWidget {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Fórmulas'),
+          title: const Text('CALCULADORA FINANCEIRA'),
           centerTitle: true,
           bottom: const TabBar(
             tabs: [
@@ -24,12 +26,8 @@ class InitialPage extends StatelessWidget {
         ),
         body: const TabBarView(
           children: [
-            Center(
-              child: Text('sac'),
-            ),
-            Center(
-              child: Text('price'),
-            ),
+            SacPage(),
+            PricePage(),
           ],
         ),
       ),
