@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:formulas/pages/sac/a_sac.dart';
+
+import 'sac/a_sac.dart';
+import 'sac/b_sac.dart';
+import 'sac/c_sac.dart';
 
 class SacPage extends StatelessWidget {
   const SacPage({Key? key}) : super(key: key);
@@ -11,8 +14,8 @@ class SacPage extends StatelessWidget {
         children: [
           ListTile(
             leading: const Text('1', style: TextStyle(fontSize: 20)),
-            title: const Text('Teste'),
-            subtitle: const Text('Criando página'),
+            //!-----------------------------------------------------------------
+            title: const Text('Descubra o valor da amortização'),
             trailing: const Icon(Icons.arrow_forward),
             onTap: () {
               Navigator.push(
@@ -22,18 +25,26 @@ class SacPage extends StatelessWidget {
           const Divider(),
           ListTile(
             leading: const Text('2', style: TextStyle(fontSize: 20)),
-            title: const Text('Título'),
-            subtitle: const Text('Subtítulo'),
+            title: const Text(
+              'Descubra o saldo devedor após ter pago algumas parcelas',
+            ),
             trailing: const Icon(Icons.arrow_forward),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => const BSac()));
+            },
           ),
           const Divider(),
           ListTile(
             leading: const Text('3', style: TextStyle(fontSize: 20)),
-            title: const Text('Título'),
-            subtitle: const Text('Subtítulo'),
+            title: const Text(
+              'Descubra o saldo devedor após algumas parcelas terem sido pagas menos uma',
+            ),
             trailing: const Icon(Icons.arrow_forward),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => CSac()));
+            },
           ),
           const Divider(),
           ListTile(
