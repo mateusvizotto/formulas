@@ -9,6 +9,8 @@ import 'sac/f_sac.dart';
 import 'sac/g_sac.dart';
 import 'sac/h_sac.dart';
 import 'sac/i_sac.dart';
+import 'sac/j_sac.dart';
+import 'sac/k_sac.dart';
 
 class SacPage extends StatelessWidget {
   const SacPage({Key? key}) : super(key: key);
@@ -123,18 +125,22 @@ class SacPage extends StatelessWidget {
           const Divider(),
           ListTile(
             leading: const Text('10', style: TextStyle(fontSize: 20)),
-            title: const Text('Título'),
-            subtitle: const Text('Subtítulo'),
+            title: const Text('Decubra a soma das prestações de um intervalo'),
             trailing: const Icon(Icons.arrow_forward),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => const JSac()));
+            },
           ),
           const Divider(),
           ListTile(
             leading: const Text('11', style: TextStyle(fontSize: 20)),
-            title: const Text('Título'),
-            subtitle: const Text('Subtítulo'),
+            title: const Text('Decubra o decréscimo das prestações'),
             trailing: const Icon(Icons.arrow_forward),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => const KSac()));
+            },
           ),
         ],
       ),
