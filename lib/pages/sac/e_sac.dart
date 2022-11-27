@@ -102,7 +102,7 @@ class _ESacState extends State<ESac> {
               height: 20,
             ),
             const Text(
-              'O valor restante das prestações é de:',
+              'O valor da prestação é de:',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 20),
             ),
