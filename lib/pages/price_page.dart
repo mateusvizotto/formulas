@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:formulas/pages/price/a_price.dart';
 
 import 'price/b_price.dart';
+import 'price/c_price.dart';
 
 class PricePage extends StatelessWidget {
   const PricePage({Key? key}) : super(key: key);
@@ -33,10 +34,14 @@ class PricePage extends StatelessWidget {
           const Divider(),
           ListTile(
             leading: const Text('3', style: TextStyle(fontSize: 20)),
-            title: const Text('Título'),
-            subtitle: const Text('Subtítulo'),
+            title: const Text(
+              'Descubra o saldo devedor no mês escolhido menos 1',
+            ),
             trailing: const Icon(Icons.arrow_forward),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => const CPrice()));
+            },
           ),
           const Divider(),
           ListTile(
