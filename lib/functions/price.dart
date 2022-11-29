@@ -34,4 +34,13 @@ class Price {
   }) {
     return (i * cPrice(p0: p0, i: i, n: n, t: t));
   }
+
+  static num ePrice({
+    required num p0,
+    required num i,
+    required num n,
+  }) {
+    num R = aPrice(p0: p0, i: i, n: n);
+    return (R - (i * p0));
+  }
 }

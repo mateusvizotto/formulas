@@ -98,7 +98,7 @@ class _DPriceState extends State<DPrice> {
               height: 20,
             ),
             const Text(
-              'O valor do saldo devedor a partir do mês escolhido menos 1 é de:',
+              'O valor da parcela de juros do mês escolhido é de:',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 20),
             ),
