@@ -80,4 +80,28 @@ class Price {
     num parteII = FVA.fva(i: i, n: (n - t - k));
     return (R * (parteI - parteII));
   }
+
+  static num iPrice({
+    required num p0,
+    required num i,
+    required num n,
+    required num t,
+  }) {
+    num R = aPrice(p0: p0, i: i, n: n);
+    num parteI = FVA.fva(i: i, n: n);
+    num parteII = FVA.fva(i: i, n: (n - t));
+    return (R * (t - (parteI - parteII)));
+  }
+
+  static num jPrice({
+    required num p0,
+    required num i,
+    required num n,
+    required num t,
+    required num k,
+  }) {
+    num R = aPrice(p0: p0, i: i, n: n);
+    num ah = hPrice(p0: p0, i: i, n: n, t: t, k: k);
+    return ((R * k) - ah);
+  }
 }
