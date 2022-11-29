@@ -25,4 +25,13 @@ class Price {
     num R = aPrice(p0: p0, i: i, n: n);
     return R * FVA.fva(i: i, n: ((n - t) + 1));
   }
+
+  static num dPrice({
+    required num p0,
+    required num i,
+    required num n,
+    required num t,
+  }) {
+    return (i * cPrice(p0: p0, i: i, n: n, t: t));
+  }
 }
