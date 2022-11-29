@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:formulas/functions/frc.dart';
 import 'package:formulas/functions/fva.dart';
 
@@ -42,5 +44,15 @@ class Price {
   }) {
     num R = aPrice(p0: p0, i: i, n: n);
     return (R - (i * p0));
+  }
+
+  static num fPrice({
+    required num p0,
+    required num i,
+    required num n,
+    required num t,
+  }) {
+    num a1 = ePrice(p0: p0, i: i, n: n);
+    return (a1 * (pow((1 + i), (t - 1))));
   }
 }
