@@ -55,4 +55,16 @@ class Price {
     num a1 = ePrice(p0: p0, i: i, n: n);
     return (a1 * (pow((1 + i), (t - 1))));
   }
+
+  static num gPrice({
+    required num p0,
+    required num i,
+    required num n,
+    required num t,
+  }) {
+    num R = aPrice(p0: p0, i: i, n: n);
+    num parteI = FVA.fva(i: i, n: n);
+    num parteII = FVA.fva(i: i, n: (n - t));
+    return (R * (parteI - parteII));
+  }
 }
