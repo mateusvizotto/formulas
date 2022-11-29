@@ -7,6 +7,7 @@ import 'price/d_price.dart';
 import 'price/e_price.dart';
 import 'price/f_price.dart';
 import 'price/g_price.dart';
+import 'price/h_price.dart';
 
 class PricePage extends StatelessWidget {
   const PricePage({Key? key}) : super(key: key);
@@ -96,10 +97,14 @@ class PricePage extends StatelessWidget {
           const Divider(),
           ListTile(
             leading: const Text('8', style: TextStyle(fontSize: 20)),
-            title: const Text('Título'),
-            subtitle: const Text('Subtítulo'),
+            title: const Text(
+              'Descubra o valor das amortizações acumuladas em um intervalo que comece no mês escolhido',
+            ),
             trailing: const Icon(Icons.arrow_forward),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => const HPrice()));
+            },
           ),
           const Divider(),
           ListTile(
